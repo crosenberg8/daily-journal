@@ -1,7 +1,28 @@
 <%- include('partials/header'); -%>
 
-  <h1>Home</h1>
+  <h1 class="underlinedHeaders">Home</h1>
   <p><%= startingContent %></p>
+
+  <h1 class="underlinedHeaders">Instructions</h1>
+  <p>Now that the basic introductions are out of the way, <b>let's go through how to use my website!!
+    <br>
+    <br>
+    To create a post, click on, or copy and paste the following link into your browser "<a href="http://localhost:3000/compose">http://localhost:3000/compose</a>"</b>. By doing this, you will be brought to a page where you can compose journal entries!
+    <br>
+    <br>
+    Then, if you want to <b>delete your post</b> or the most recent post logged, <b>click on or copy & paste the following link in your browser <a href="http://localhost:3000/remove">http://localhost:3000/remove</a></b>, which will remove the most recent post!</p>
+
+  <h1 class="underlinedHeaders">Why is this web page different from many others?</h1>
+  <p>
+    <ul>
+      <li>Rather than copying and pasting all the repetitive HTML for each page (like the headers and footers), <b>I used EJS partials</b> to create the header and footer a single time in their own respective separate files, and then I just injected the content of those files into the top and bottom of each page!!</li>
+      <li>Rather than simply hosting all of my HTMl and CSS files on a server like a static web page might have, this web page used <b>Node JS</b> and <b>Express</b>to process all of the server side requests, so the user can have a fast and seamless experience!! <b>Summary:</b> Rather than processing everything on the user's end, I am processing everything on the server's end (I am using Heroku for this so thanks Heroku!)</li>
+    </ul>
+  </p>
+
+
+  <h2>----------- Journal Entries -----------</h2>
+
 
   <% posts.forEach(function(post) { %>
       <h1><%=post.title%></h1>
