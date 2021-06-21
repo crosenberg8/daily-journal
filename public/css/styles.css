@@ -19,22 +19,31 @@
 	padding-bottom: 60px;
 }
 
-.footer {
-	position: absolute;
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
-}
-
-.footer p {
-	margin-top: 25px;
-	font-size: 12px;
-  color: #fff;
-}
-
 .underlinedHeaders {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+  font-weight: bold;
+}
+
+.journalDiv {
+  background-color: #ECECEC;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.journalDiv h2 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.journalDivContent {
+  padding: 20px 20px 20px 20px;
+}
+
+.journalDivContent h1{
+  font-weight: bold;
 }

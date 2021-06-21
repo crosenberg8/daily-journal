@@ -15,22 +15,23 @@
   <h1 class="underlinedHeaders">Why is this web page different from many others?</h1>
   <p>
     <ul>
-      <li>Rather than copying and pasting all the repetitive HTML for each page (like the headers and footers), <b>I used EJS partials</b> to create the header and footer a single time in their own respective separate files, and then I just injected the content of those files into the top and bottom of each page!!</li>
+      <li>Rather than copying and pasting all the repetitive HTML for each page (like the header), <b>I used EJS partials</b> to create the header and footer a single time in their own respective separate files, and then I just injected the content of those files into the top and bottom of each page!!</li>
       <li>Rather than simply hosting all of my HTMl and CSS files on a server like a static web page might have, this web page used <b>Node JS</b> and <b>Express</b>to process all of the server side requests, so the user can have a fast and seamless experience!! <b>Summary:</b> Rather than processing everything on the user's end, I am processing everything on the server's end (I am using Heroku for this so thanks Heroku!)</li>
     </ul>
   </p>
 
-
-  <h2>----------- Journal Entries -----------</h2>
-
-
-  <% posts.forEach(function(post) { %>
-      <h1><%=post.title%></h1>
-      <p>
-        <%=post.body.substring(0,100) + " ..."%>
-        <a href="/posts/<%=post.title%>">Read More</a>
-      </p>
-  <% }); %>
+  <br>
 
 
-<%- include('partials/footer'); -%>
+  <div class="journalDiv">
+    <h2>Journal Entries</h2>
+    <div class="journalDivContent">
+      <% posts.forEach(function(post) { %>
+          <h1><%=post.title%></h1>
+          <p>
+            <%=post.body.substring(0,100) + " ..."%>
+            <a href="/posts/<%=post.title%>">Read More</a>
+          </p>
+      <% }); %>
+    </div>
+  </div>
